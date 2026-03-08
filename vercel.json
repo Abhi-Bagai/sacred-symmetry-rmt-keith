@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://sacredsymmetryrmt.ca/$1",
-      "permanent": true
-    }
-  ]
-}
