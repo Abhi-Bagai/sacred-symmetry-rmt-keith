@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keith's Massage Therapy | Registered Massage Therapist in Kamloops, BC</title>
-  <meta name="description" content="Professional registered massage therapy in Kamloops, BC. Book online with Keith's Massage Therapy for personalized, caring treatment in a calm environment.">
+  <title id="meta-title"></title>
+  <meta name="description" id="meta-description" content="">
   <!-- Open Graph -->
-  <meta property="og:title" content="Keith's Massage Therapy | RMT in Kamloops, BC">
-  <meta property="og:description" content="Professional registered massage therapy in Kamloops, BC. Book online for personalized care.">
+  <meta property="og:title" id="meta-og-title" content="">
+  <meta property="og:description" id="meta-og-description" content="">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yoursite.com">
   <meta property="og:image" content="https://yoursite.com/assets/og-image.jpg">
@@ -20,24 +20,33 @@
 <body>
   <!-- Announcement bar -->
   <aside class="announcement" aria-label="Announcement">
-    <p>Now accepting online bookings through Jane.</p>
+    <p data-msg="announcement.text"></p>
   </aside>
 
   <!-- Header / Navigation -->
   <header class="header" id="header">
     <div class="header-inner container">
-      <a href="#home" class="logo" aria-label="Keith's Massage Therapy - Home">Keith's Massage Therapy</a>
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
+      <a href="#home" class="logo" data-msg-aria-label="header.logoAriaLabel">
+        <img src="assets/logo_navbar.png" alt="" class="logo-img" aria-hidden="true">
+      </a>
+      <h1 class="navbar-title" data-msg="header.navbarTitle"></h1>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" data-msg-aria-label="header.navToggleAriaLabel">
         <span class="hamburger"></span>
       </button>
-      <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <nav class="nav" id="main-nav" data-msg-aria-label="header.mainNavAriaLabel" aria-label="">
         <ul class="nav-list">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#faq" class="nav-link">FAQ / Policies</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-          <li><a href="#" class="btn btn-primary nav-cta">Book Now</a></li>
+          <li><a href="#home" class="nav-link" data-msg="header.nav.home"></a></li>
+          <li><a href="#about" class="nav-link" data-msg="header.nav.about"></a></li>
+          <li><a href="#services" class="nav-link" data-msg="header.nav.services"></a></li>
+          <li><a href="#faq" class="nav-link" data-msg="header.nav.faq"></a></li>
+          <li><a href="#contact" class="nav-link" data-msg="header.nav.contact"></a></li>
+          <li><a href="#" class="btn btn-primary nav-cta" data-msg="header.nav.bookNow"></a></li>
+          <li>
+            <div class="lang-toggle-pill" id="lang-toggle" role="group" aria-label="Language">
+              <button type="button" class="lang-toggle-option" data-locale="en" aria-pressed="false" aria-label="English"><span class="lang-code">EN</span></button>
+              <button type="button" class="lang-toggle-option" data-locale="fr" aria-pressed="false" aria-label="Français"><span class="lang-code">FR</span></button>
+            </div>
+          </li>
         </ul>
       </nav>
     </div>
@@ -48,17 +57,18 @@
     <section class="hero" id="home" aria-labelledby="hero-heading">
       <div class="hero-inner container">
         <div class="hero-content">
-          <h1 id="hero-heading">Professional Massage Therapy in Kamloops, BC</h1>
-          <p class="hero-lead">Personalized care in a calm, welcoming space. Whether you're managing tension, recovering from injury, or simply need time to unwind, we're here to help. Book easily online.</p>
+          <img src="assets/logo.png" alt="" class="hero-content-logo" aria-hidden="true">
+          <h1 id="hero-heading" data-msg="hero.heading"></h1>
+          <p class="hero-lead" data-msg="hero.lead"></p>
           <div class="hero-ctas">
-            <a href="#" class="btn btn-primary btn-lg">Book Now</a>
-            <a href="#services" class="btn btn-secondary btn-lg">View Services</a>
+            <a href="#" class="btn btn-primary btn-lg" data-msg="hero.bookNow"></a>
+            <a href="#services" class="btn btn-secondary btn-lg" data-msg="hero.viewServices"></a>
           </div>
-          <p class="hero-trust">Online booking and payment handled securely through Jane.</p>
+          <p class="hero-trust" data-msg="hero.trust"></p>
         </div>
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-image-placeholder">
-            <span>Image placeholder</span>
+            <img src="assets/Chase_landscape.jpg" alt="Hero image" aria-hidden="true">
           </div>
         </div>
       </div>
@@ -68,13 +78,14 @@
     <section class="about section" id="about" aria-labelledby="about-heading">
       <div class="container about-inner">
         <div class="about-content">
-          <h2 id="about-heading">About Your Therapist</h2>
+          <h2 id="about-heading" data-msg="about.heading"></h2>
           <div class="about-headshot-placeholder" aria-hidden="true">
-            <span>Headshot</span>
+            <span data-msg="about.headshotPlaceholder"></span>
+            <img src="assets/logo.png" alt="Headshot of Keith" aria-hidden="true">
           </div>
           <div class="about-text">
-            <p>Your RMT Name is a Registered Massage Therapist (RMT) in Kamloops, BC, committed to providing thoughtful, evidence-informed care. With a focus on listening to your goals and comfort level, each session is tailored to support your wellness and recovery.</p>
-            <p>Credentials and continuing education are maintained in accordance with provincial requirements. You can expect a professional, respectful environment where your care comes first.</p>
+            <p data-msg="about.paragraph1"></p>
+            <p data-msg="about.paragraph2"></p>
           </div>
         </div>
       </div>
@@ -83,20 +94,20 @@
     <!-- Services Section -->
     <section class="services section" id="services" aria-labelledby="services-heading">
       <div class="container">
-        <h2 id="services-heading">Services</h2>
-        <p class="section-intro">Choose a session length that fits your needs. Booking and payment are handled securely through Jane.</p>
+        <h2 id="services-heading" data-msg="services.heading"></h2>
+        <p class="section-intro" data-msg="services.intro"></p>
         <div class="service-cards">
           <article class="service-card">
-            <h3>45 Minute Massage Therapy</h3>
-            <p>A focused session ideal for targeting specific areas or fitting into a busy schedule. Includes assessment, treatment, and home-care suggestions as needed.</p>
-            <p class="service-price">$XX.XX + tax</p>
-            <a href="#" class="btn btn-primary">Book Now</a>
+            <h3 data-msg="services.card45.title"></h3>
+            <p data-msg="services.card45.description"></p>
+            <p class="service-price" data-msg="services.card45.price"></p>
+            <a href="#" class="btn btn-primary" data-msg="services.card45.bookNow"></a>
           </article>
           <article class="service-card">
-            <h3>60 Minute Massage Therapy</h3>
-            <p>A full hour allows for a more comprehensive treatment—addressing multiple areas, deeper relaxation, or extended focus on problem areas. Our most popular option.</p>
-            <p class="service-price">$XX.XX + tax</p>
-            <a href="#" class="btn btn-primary">Book Now</a>
+            <h3 data-msg="services.card60.title"></h3>
+            <p data-msg="services.card60.description"></p>
+            <p class="service-price" data-msg="services.card60.price"></p>
+            <a href="#" class="btn btn-primary" data-msg="services.card60.bookNow"></a>
           </article>
         </div>
       </div>
@@ -105,23 +116,23 @@
     <!-- Benefits Section -->
     <section class="benefits section" id="benefits" aria-labelledby="benefits-heading">
       <div class="container">
-        <h2 id="benefits-heading">Why Choose Us</h2>
+        <h2 id="benefits-heading" data-msg="benefits.heading"></h2>
         <div class="benefit-cards">
           <article class="benefit-card">
-            <h3>Professional Care</h3>
-            <p>Evidence-informed treatment from a registered professional who listens and adapts to your needs.</p>
+            <h3 data-msg="benefits.professionalCare.title"></h3>
+            <p data-msg="benefits.professionalCare.description"></p>
           </article>
           <article class="benefit-card">
-            <h3>Convenient Online Booking</h3>
-            <p>Book your appointment anytime through our secure Jane booking system. No phone tag required.</p>
+            <h3 data-msg="benefits.traumaInformed.title"></h3>
+            <p data-msg="benefits.traumaInformed.description"></p>
           </article>
           <article class="benefit-card">
-            <h3>Personalized Treatment</h3>
-            <p>Every session is tailored to your goals, comfort level, and what your body needs that day.</p>
+            <h3 data-msg="benefits.personalizedTreatment.title"></h3>
+            <p data-msg="benefits.personalizedTreatment.description"></p>
           </article>
           <article class="benefit-card">
-            <h3>Calm & Welcoming Environment</h3>
-            <p>A clean, quiet space designed for relaxation and focus on your wellness.</p>
+            <h3 data-msg="benefits.calmEnvironment.title"></h3>
+            <p data-msg="benefits.calmEnvironment.description"></p>
           </article>
         </div>
       </div>
@@ -130,56 +141,51 @@
     <!-- FAQ / Policies Section -->
     <section class="faq section" id="faq" aria-labelledby="faq-heading">
       <div class="container">
-        <h2 id="faq-heading">FAQ &amp; Policies</h2>
+        <h2 id="faq-heading" data-msg="faq.heading"></h2>
         <div class="faq-list" role="list">
           <div class="faq-item" role="listitem">
             <h3>
-              <button class="faq-trigger" id="faq-1" aria-expanded="false" aria-controls="faq-answer-1" data-faq-toggle>
-                What should I expect at my first appointment?
+              <button class="faq-trigger" id="faq-1" aria-expanded="false" aria-controls="faq-answer-1" data-faq-toggle data-msg="faq.items.0.question">
               </button>
             </h3>
             <div class="faq-content" id="faq-answer-1" role="region" aria-labelledby="faq-1" hidden>
-              <p>Your first visit includes a brief health history and discussion of your goals and any areas of concern. Your therapist will explain the treatment plan and ensure you're comfortable before starting. You'll be draped appropriately throughout the session and can ask questions at any time.</p>
+              <p data-msg="faq.items.0.answer"></p>
             </div>
           </div>
           <div class="faq-item" role="listitem">
             <h3>
-              <button class="faq-trigger" id="faq-2" aria-expanded="false" aria-controls="faq-answer-2" data-faq-toggle>
-                What is the cancellation policy?
+              <button class="faq-trigger" id="faq-2" aria-expanded="false" aria-controls="faq-answer-2" data-faq-toggle data-msg="faq.items.1.question">
               </button>
             </h3>
             <div class="faq-content" id="faq-answer-2" role="region" aria-labelledby="faq-2" hidden>
-              <p>We ask that you cancel or reschedule at least 24 hours before your appointment. Late cancellations or no-shows may be subject to a fee. If you need to change your appointment, you can do so through the Jane booking link or by contacting us directly.</p>
+              <p data-msg="faq.items.1.answer"></p>
             </div>
           </div>
           <div class="faq-item" role="listitem">
             <h3>
-              <button class="faq-trigger" id="faq-3" aria-expanded="false" aria-controls="faq-answer-3" data-faq-toggle>
-                Do you provide insurance receipts?
+              <button class="faq-trigger" id="faq-3" aria-expanded="false" aria-controls="faq-answer-3" data-faq-toggle data-msg="faq.items.2.question">
               </button>
             </h3>
             <div class="faq-content" id="faq-answer-3" role="region" aria-labelledby="faq-3" hidden>
-              <p>Yes. After your appointment you will receive a receipt suitable for submission to your extended health plan or insurance provider. Details on how to access your receipt will be provided at the clinic or through the booking system.</p>
+              <p data-msg="faq.items.2.answer"></p>
             </div>
           </div>
           <div class="faq-item" role="listitem">
             <h3>
-              <button class="faq-trigger" id="faq-4" aria-expanded="false" aria-controls="faq-answer-4" data-faq-toggle>
-                How do I book an appointment?
+              <button class="faq-trigger" id="faq-4" aria-expanded="false" aria-controls="faq-answer-4" data-faq-toggle data-msg="faq.items.3.question">
               </button>
             </h3>
             <div class="faq-content" id="faq-answer-4" role="region" aria-labelledby="faq-4" hidden>
-              <p>Click the &quot;Book Now&quot; button on this site to be taken to our online booking page powered by Jane. You can choose your preferred date and time, and payment is handled securely through the same system. You'll receive a confirmation once your appointment is set.</p>
+              <p data-msg="faq.items.3.answer"></p>
             </div>
           </div>
           <div class="faq-item" role="listitem">
             <h3>
-              <button class="faq-trigger" id="faq-5" aria-expanded="false" aria-controls="faq-answer-5" data-faq-toggle>
-                What if I arrive late?
+              <button class="faq-trigger" id="faq-5" aria-expanded="false" aria-controls="faq-answer-5" data-faq-toggle data-msg="faq.items.4.question">
               </button>
             </h3>
             <div class="faq-content" id="faq-answer-5" role="region" aria-labelledby="faq-5" hidden>
-              <p>Your session will end at the scheduled time so that the next client is not delayed. Depending on how late you arrive, we may be able to offer a shortened treatment; you will still be charged for the full appointment. We recommend arriving a few minutes early for your first visit to complete any paperwork.</p>
+              <p data-msg="faq.items.4.answer"></p>
             </div>
           </div>
         </div>
@@ -189,18 +195,32 @@
     <!-- Contact Section -->
     <section class="contact section" id="contact" aria-labelledby="contact-heading">
       <div class="container contact-inner">
-        <h2 id="contact-heading">Contact</h2>
+        <h2 id="contact-heading" data-msg="contact.heading"></h2>
         <div class="contact-grid">
           <div class="contact-info">
-            <p class="contact-name">Keith's Massage Therapy</p>
-            <p>Kamloops, BC</p>
-            <p><a href="tel:+1234567890">(250) 555-0123</a></p>
-            <p><a href="mailto:hello@example.com">hello@example.com</a></p>
-            <p class="contact-hours"><strong>Hours</strong><br>Mon–Fri: 9:00 AM – 5:00 PM<br>Sat: By appointment</p>
-            <a href="#" class="btn btn-primary">Book Now</a>
+            <p class="contact-name" data-msg="contact.name"></p>
+            <p data-msg="contact.addressLine1"></p>
+            <p data-msg="contact.location"></p>
+            <p><a href="tel:+1234567890" data-msg="contact.phone"></a> <span class="contact-phone-note" data-msg="contact.phoneNote"></span></p>
+            <p><a href="mailto:hello@example.com" data-msg="contact.email"></a></p>
+            <p class="contact-hours"><strong data-msg="contact.hoursLabel"></strong><br><span data-msg="contact.hoursWeekday"></span><br><span data-msg="contact.hoursSaturday"></span></p>
+            <a href="#" class="btn btn-primary" data-msg="contact.bookNow">Book Now</a>
           </div>
-          <div class="map-placeholder" aria-hidden="true">
-            <span>Map placeholder</span>
+          <div class="map-placeholder">
+            <iframe
+              class="map-embed"
+              src="https://www.google.com/maps?q=934B+Thompson+Ave,+Chase,+BC,+Canada&z=15&output=embed"
+              title="Map showing Sacred Symmetry Massage Therapy location"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=934B+Thompson+Ave,+Chase,+BC,+Canada"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="map-placeholder-link"
+              aria-label="Open location in Google Maps"
+            ></a>
           </div>
         </div>
       </div>
@@ -210,22 +230,22 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p class="footer-name">Keith's Massage Therapy</p>
+      <p class="footer-name" data-msg="footer.name"></p>
       <nav class="footer-nav" aria-label="Footer navigation">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#">Book Now</a></li>
+          <li><a href="#home" data-msg="footer.nav.home"></a></li>
+          <li><a href="#about" data-msg="footer.nav.about"></a></li>
+          <li><a href="#services" data-msg="footer.nav.services"></a></li>
+          <li><a href="#faq" data-msg="footer.nav.faq"></a></li>
+          <li><a href="#contact" data-msg="footer.nav.contact"></a></li>
+          <li><a href="#" data-msg="footer.nav.bookNow"></a></li>
         </ul>
       </nav>
-      <p class="footer-jane">Booking and payment are handled securely through Jane.</p>
-      <p class="footer-copy">&copy; <span id="year"></span> Keith's Massage Therapy. All rights reserved.</p>
+      <p class="footer-jane" data-msg="footer.jane"></p>
+      <p class="footer-copy" data-msg="footer.copyright" data-msg-replace-year="true"></p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

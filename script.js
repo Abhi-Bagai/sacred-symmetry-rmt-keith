@@ -1,10 +1,122 @@
 /**
  * Keith's Massage Therapy – Static site scripts
  * Vanilla JS only: mobile nav, smooth scroll, FAQ accordion, fade-in on scroll.
+ * User-facing text from lang/{locale}/user/usermessages.js; language toggle EN/FR.
  */
+
+import userMessagesEn from "./lang/en/user/usermessages.js";
+import userMessagesFr from "./lang/fr/user/usermessages.js";
+
+var LOCALE_KEY = "locale";
+var DEFAULT_LOCALE = "en";
 
 (function () {
   "use strict";
+
+  var messagesByLocale = { en: userMessagesEn, fr: userMessagesFr };
+
+  function getCurrentLocale() {
+    var stored = localStorage.getItem(LOCALE_KEY);
+    return stored === "fr" || stored === "en" ? stored : DEFAULT_LOCALE;
+  }
+
+  function setCurrentLocale(locale) {
+    localStorage.setItem(LOCALE_KEY, locale);
+  }
+
+  // -------------------------------------------------------------------------
+  // Resolve nested path in object (e.g. "faq.items.0.question")
+  // -------------------------------------------------------------------------
+  function getByPath(obj, path) {
+    return path.split(".").reduce(function (o, k) {
+      return o != null && o[k] !== undefined ? o[k] : null;
+    }, obj);
+  }
+
+  // -------------------------------------------------------------------------
+  // Apply userMessages to the page (meta, data-msg, data-msg-aria-label)
+  // -------------------------------------------------------------------------
+  function applyUserMessages(msg) {
+    if (!msg) return;
+
+    if (msg.locale) {
+      document.documentElement.lang = msg.locale;
+    }
+    document.title = msg.meta.title;
+    var metaDesc = document.getElementById("meta-description");
+    if (metaDesc) metaDesc.setAttribute("content", msg.meta.description);
+    var ogTitle = document.getElementById("meta-og-title");
+    if (ogTitle) ogTitle.setAttribute("content", msg.meta.ogTitle);
+    var ogDesc = document.getElementById("meta-og-description");
+    if (ogDesc) ogDesc.setAttribute("content", msg.meta.ogDescription);
+
+    document.querySelectorAll("[data-msg]").forEach(function (el) {
+      if (el.closest("#lang-toggle")) return;
+      var path = el.getAttribute("data-msg");
+      var value = getByPath(msg, path);
+      if (value != null) {
+        if (el.hasAttribute("data-msg-replace-year")) {
+          value = String(value).replace("{year}", new Date().getFullYear());
+        }
+        el.textContent = value;
+      }
+    });
+
+    document.querySelectorAll("[data-msg-aria-label]").forEach(function (el) {
+      if (el.closest("#lang-toggle")) return;
+      var path = el.getAttribute("data-msg-aria-label");
+      var value = getByPath(msg, path);
+      if (value != null) el.setAttribute("aria-label", value);
+    });
+  }
+
+  function setLangToggleActive(locale) {
+    var pill = document.getElementById("lang-toggle");
+    if (!pill) return;
+    pill.querySelectorAll(".lang-toggle-option").forEach(function (btn) {
+      var isActive = btn.getAttribute("data-locale") === locale;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+  }
+
+  function initAndApplyMessages() {
+    var locale = getCurrentLocale();
+    var msg = messagesByLocale[locale];
+    applyUserMessages(msg);
+    setLangToggleActive(locale);
+  }
+
+  function switchLocale(locale) {
+    if (locale === getCurrentLocale()) return;
+    setCurrentLocale(locale);
+    applyUserMessages(messagesByLocale[locale]);
+    setLangToggleActive(locale);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      initAndApplyMessages();
+      var pill = document.getElementById("lang-toggle");
+      if (pill) {
+        pill.querySelectorAll(".lang-toggle-option").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            switchLocale(btn.getAttribute("data-locale"));
+          });
+        });
+      }
+    });
+  } else {
+    initAndApplyMessages();
+    var pill = document.getElementById("lang-toggle");
+    if (pill) {
+      pill.querySelectorAll(".lang-toggle-option").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          switchLocale(btn.getAttribute("data-locale"));
+        });
+      });
+    }
+  }
 
   // -------------------------------------------------------------------------
   // DOM refs
@@ -23,8 +135,8 @@
     });
   }
 
-  // Close mobile nav when a nav link is clicked (for in-page anchors)
-  var navLinks = document.querySelectorAll(".nav-link, .nav .btn");
+  // Close mobile nav when a nav link or language toggle is clicked
+  var navLinks = document.querySelectorAll(".nav-link, .nav .btn, .lang-toggle-option");
   navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
       if (header.classList.contains("nav-open")) {
@@ -126,11 +238,4 @@
     window.addEventListener("resize", checkFadeIn);
   }
 
-  // -------------------------------------------------------------------------
-  // Footer year
-  // -------------------------------------------------------------------------
-  var yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
 })();
