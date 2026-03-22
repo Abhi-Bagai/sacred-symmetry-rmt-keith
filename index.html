@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Announcement bar -->
@@ -40,7 +40,7 @@
           <li><a href="#services" class="nav-link" data-msg="header.nav.services"></a></li>
           <li><a href="#faq" class="nav-link" data-msg="header.nav.faq"></a></li>
           <li><a href="#contact" class="nav-link" data-msg="header.nav.contact"></a></li>
-          <li><a href="#" class="btn btn-primary nav-cta" data-msg="header.nav.bookNow"></a></li>
+          <li><a href="https://sacredsymmetryrmt.janeapp.com/" class="btn btn-primary nav-cta" data-msg="header.nav.bookNow"></a></li>
           <li>
             <div class="lang-toggle-pill" id="lang-toggle" role="group" aria-label="Language">
               <button type="button" class="lang-toggle-option" data-locale="en" aria-pressed="false" aria-label="English"><span class="lang-code">EN</span></button>
@@ -61,7 +61,7 @@
           <h1 id="hero-heading" data-msg="hero.heading"></h1>
           <p class="hero-lead" data-msg="hero.lead"></p>
           <div class="hero-ctas">
-            <a href="#" class="btn btn-primary btn-lg" data-msg="hero.bookNow"></a>
+            <a href="https://sacredsymmetryrmt.janeapp.com/" class="btn btn-primary btn-lg" data-msg="hero.bookNow"></a>
             <a href="#services" class="btn btn-secondary btn-lg" data-msg="hero.viewServices"></a>
           </div>
           <p class="hero-trust" data-msg="hero.trust"></p>
@@ -81,11 +81,31 @@
           <h2 id="about-heading" data-msg="about.heading"></h2>
           <div class="about-headshot-placeholder" aria-hidden="true">
             <span data-msg="about.headshotPlaceholder"></span>
-            <img src="assets/logo.png" alt="Headshot of Keith" aria-hidden="true">
+            <img src="assets/Headshot.jpg" alt="Headshot of Keith" aria-hidden="true">
           </div>
           <div class="about-text">
             <p data-msg="about.paragraph1"></p>
             <p data-msg="about.paragraph2"></p>
+            <p data-msg="about.paragraph3"></p>
+            <p data-msg="about.paragraph4"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story section" id="story" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="story-content">
+          <img src="assets/logo.png" alt="" class="story-content-logo" aria-hidden="true">
+          <h2 id="story-heading" data-msg="story.heading"></h2>
+          <div class="story-text">
+            <p data-msg="story.paragraph1"></p>
+            <p data-msg="story.paragraph2"></p>
+            <p data-msg="story.paragraph3"></p>
+            <p data-msg="story.paragraph4"></p>
+            <p data-msg="story.paragraph5"></p>
+            <p data-msg="story.paragraph6"></p>
           </div>
         </div>
       </div>
@@ -95,21 +115,14 @@
     <section class="services section" id="services" aria-labelledby="services-heading">
       <div class="container">
         <h2 id="services-heading" data-msg="services.heading"></h2>
-        <p class="section-intro" data-msg="services.intro"></p>
+        
         <div class="service-cards">
-          <article class="service-card">
-            <h3 data-msg="services.card45.title"></h3>
-            <p data-msg="services.card45.description"></p>
-            <p class="service-price" data-msg="services.card45.price"></p>
-            <a href="#" class="btn btn-primary" data-msg="services.card45.bookNow"></a>
-          </article>
-          <article class="service-card">
-            <h3 data-msg="services.card60.title"></h3>
-            <p data-msg="services.card60.description"></p>
-            <p class="service-price" data-msg="services.card60.price"></p>
-            <a href="#" class="btn btn-primary" data-msg="services.card60.bookNow"></a>
+          <article class="service-card service-card--intro">
+            <p class="section-intro" data-msg="services.intro" data-msg-html></p>
+            <a href="https://sacredsymmetryrmt.janeapp.com/" class="btn btn-primary service-card-book-btn" data-msg="services.card45.bookNow"></a>
           </article>
         </div>
+   
       </div>
     </section>
 
@@ -137,6 +150,8 @@
         </div>
       </div>
     </section>
+
+  
 
     <!-- FAQ / Policies Section -->
     <section class="faq section" id="faq" aria-labelledby="faq-heading">
@@ -188,6 +203,33 @@
               <p data-msg="faq.items.4.answer"></p>
             </div>
           </div>
+          <div class="faq-item" role="listitem">
+            <h3>
+              <button class="faq-trigger" id="faq-6" aria-expanded="false" aria-controls="faq-answer-6" data-faq-toggle data-msg="faq.items.5.question">
+              </button>
+            </h3>
+            <div class="faq-content" id="faq-answer-6" role="region" aria-labelledby="faq-6" hidden>
+              <p data-msg="faq.items.5.answer"></p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <h3>
+              <button class="faq-trigger" id="faq-7" aria-expanded="false" aria-controls="faq-answer-7" data-faq-toggle data-msg="faq.items.6.question">
+              </button>
+            </h3>
+            <div class="faq-content" id="faq-answer-7" role="region" aria-labelledby="faq-7" hidden>
+              <p data-msg="faq.items.6.answer"></p>
+            </div>
+          </div>
+          <div class="faq-item" role="listitem">
+            <h3>
+              <button class="faq-trigger" id="faq-8" aria-expanded="false" aria-controls="faq-answer-8" data-faq-toggle data-msg="faq.items.7.question">
+              </button>
+            </h3>
+            <div class="faq-content" id="faq-answer-8" role="region" aria-labelledby="faq-8" hidden>
+              <p data-msg="faq.items.7.answer"></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -203,8 +245,9 @@
             <p data-msg="contact.location"></p>
             <p><a href="tel:+1234567890" data-msg="contact.phone"></a> <span class="contact-phone-note" data-msg="contact.phoneNote"></span></p>
             <p><a href="mailto:hello@example.com" data-msg="contact.email"></a></p>
+            <p class="contact-website"><a href="https://www.SacredSymmetryRMT.com" target="_blank" rel="noopener noreferrer" data-msg="contact.website"></a></p>
             <p class="contact-hours"><strong data-msg="contact.hoursLabel"></strong><br><span data-msg="contact.hoursWeekday"></span><br><span data-msg="contact.hoursSaturday"></span></p>
-            <a href="#" class="btn btn-primary" data-msg="contact.bookNow">Book Now</a>
+            <a href="https://sacredsymmetryrmt.janeapp.com/" class="btn btn-primary" data-msg="contact.bookNow">Book Now</a>
           </div>
           <div class="map-placeholder">
             <iframe
@@ -238,7 +281,7 @@
           <li><a href="#services" data-msg="footer.nav.services"></a></li>
           <li><a href="#faq" data-msg="footer.nav.faq"></a></li>
           <li><a href="#contact" data-msg="footer.nav.contact"></a></li>
-          <li><a href="#" data-msg="footer.nav.bookNow"></a></li>
+          <li><a href="https://sacredsymmetryrmt.janeapp.com/" data-msg="footer.nav.bookNow"></a></li>
         </ul>
       </nav>
       <p class="footer-jane" data-msg="footer.jane"></p>

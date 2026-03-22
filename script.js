@@ -58,7 +58,11 @@ var DEFAULT_LOCALE = "en";
         if (el.hasAttribute("data-msg-replace-year")) {
           value = String(value).replace("{year}", new Date().getFullYear());
         }
-        el.textContent = value;
+        if (el.hasAttribute("data-msg-html")) {
+          el.innerHTML = value;
+        } else {
+          el.textContent = value;
+        }
       }
     });
 

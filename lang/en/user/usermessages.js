@@ -36,9 +36,14 @@ const userMessages = {
     },
   },
 
+  BookNow: {
+    text: "Book Now",
+    link: "https://sacredsymmetryrmt.janeapp.com/"
+  },
+
   // Hero
   hero: {
-    heading: "Professional Massage Therapy in Chase, BC",
+    heading: "Registered Massage Therapy in Chase, BC",
     lead: "Thoughtful, client-centered care in a calm and nourishing environment. Whether you are seeking pain relief, improved mobility, or support for nervous system regulation, each treatment is tailored to your needs.",
     bookNow: "Book Now",
     viewServices: "View Services",
@@ -54,58 +59,38 @@ const userMessages = {
     paragraph1:
       "Keith Bes is a Registered Massage Therapist providing thoughtful, client-centered care in a calm and nourishing environment. Keith’s interest in bodywork began long before his formal training. In his early twenties he was introduced to energy-based healing practices, which sparked a deep curiosity about how the body stores tension and how therapeutic touch can support healing. This curiosity eventually led him to pursue professional education in massage therapy, where he developed a strong foundation in anatomy, physiology, and evidence-informed treatment.",
     paragraph2:
-      "Today Keith focuses on treatments that help reduce pain, improve mobility, and support nervous system regulation. His approach often incorporates slow myofascial release, therapeutic massage techniques, and gentle nervous-system-focused work tailored to each client’s needs.",
+      "Today Keith focuses on treatments that help reduce pain, improve mobility, and support nervous system regulation. His approach often incorporates slow myofascial release, deep tissue and other therapeutic massage techniques, and gentle nervous-system-focused work tailored to each client’s needs.",
     paragraph3:
       "Keith is also trained in trauma-informed practice, which emphasizes clear communication, consent, and helping clients feel safe and comfortable during treatment. He welcomes people from all backgrounds and strives to create an inclusive and respectful space for everyone.",
     paragraph4:
       "Outside of the clinic, Keith enjoys spending time outdoors, creating art, and participating in music, drumming, and movement practices that support balance and well-being.",
   },
-
-  // Optional: Why Sacred Symmetry / philosophy section
-  philosophy: {
-    heading: "Why Sacred Symmetry?",
+  // Story
+  story: {
+    heading: "Story",
     paragraph1:
-      "The name Sacred Symmetry reflects how I understand the human body, healing, and life itself. Symmetry exists everywhere in nature — in the branching of trees, the spirals of shells, the structure of flowers, the rhythm of breath, and the balance between left and right within the human body. The body is not random. It is patterned, organized, and remarkably adaptive.",
+      "The name Sacred Symmetry reflects how I understand the human body, healing, and life itself.",
     paragraph2:
-      "In massage therapy, I work with these natural patterns. When pain or dysfunction arises, it is often a disruption of balance — one side compensating for another, one structure overworking while another under-performing. Healing is not about forcing change, but about restoring harmony and supporting the body’s innate capacity to regulate and return to equilibrium.",
+      "Symmetry exists everywhere in nature; in the branching of trees, the spirals of shells, the structure of flowers, the rhythm of breath, and the balance between left and right within the human body. The body is not random. It is patterned, organized, and remarkably adaptive.",
     paragraph3:
-      "The human body is extraordinary. It carries memory, adapts to stress, protects us, communicates through sensation, and heals in ways we continue to study and better understand. To treat the body as sacred means to approach it with respect, presence, and humility. It means recognizing that healing is a collaborative process between practitioner and client — and that every session deserves care and intention.",
+      "In massage therapy, I work with these natural patterns. When pain or dysfunction arises, it is often a disruption of balance, one side compensating for another, one structure overworking while another under-performing. Healing is not about forcing change, but about restoring harmony and supporting the body's innate capacity to regulate and return to equilibrium.",
     paragraph4:
-      "The symbol behind Sacred Symmetry reflects this philosophy: balance between strength and softness, stability and mobility, structure and flow. True health is not rigidity — it is dynamic balance.",
+      "The human body is extraordinary. It carries memory, adapts to stress, protects us, communicates through sensation, and heals in ways we continue to study and better understand. To treat the body as sacred means to approach it with respect, presence, and humility. It means recognizing that healing is a collaborative process between practitioner and client and that every session deserves care and intention.",
     paragraph5:
-      "Sacred Symmetry Massage Therapy is my commitment to working with the body’s natural intelligence — restoring alignment, reducing pain, and supporting long-term function through grounded, evidence-informed, and compassionate care.",
+      "The symbol behind Sacred Symmetry reflects this philosophy: balance between strength and softness, stability and mobility, structure and flow. True health is not rigidity, it is dynamic balance.",
+    paragraph6:
+      "Sacred Symmetry Massage Therapy is my commitment to working with the body's natural intelligence to restore alignment, reduce pain, and supporting long-term function through grounded, evidence-informed, and compassionate care.",
   },
 
   // Services
   services: {
     heading: "Services",
     intro:
-      "Choose a session length that fits your needs. Each treatment is tailored to support pain relief, mobility, and overall well-being.",
+      "Choose a session length that fits your needs. Each treatment is tailored to support pain relief, mobility, and overall well-being. Services. We provide <b>45</b>, <b>60</b>, <b>75</b>, or <b>90 minute massages</b> depending on the needs of the client. Located across from the medical services building on Thompson Avenue in Chase, BC.",
     card45: {
       title: "45 Minute Massage Therapy",
       description: "A focused treatment for a specific area of concern.",
       price: "$100 + GST",
-      bookNow: "Book Now",
-    },
-    card60: {
-      title: "60 Minute Massage Therapy",
-      description:
-        "A balanced session length for focused treatment and more comprehensive care.",
-      price: "$135 + GST",
-      bookNow: "Book Now",
-    },
-    card75: {
-      title: "75 Minute Massage Therapy",
-      description:
-        "If you need that extra little bit of time and extended focus on multiple areas, or are looking for full-body treatment, this is the option for you.",
-      price: "$170 + GST",
-      bookNow: "Book Now",
-    },
-    card90: {
-      title: "90 Minute Massage Therapy",
-      description:
-        "Only for those looking for a deep full body massage treatment or for those who have discussed this length with their therapist please.",
-      price: "$205 + GST",
       bookNow: "Book Now",
     },
   },
@@ -161,12 +146,12 @@ const userMessages = {
       {
         question: "What should I expect at my first appointment?",
         answer:
-          "Your treatment begins with a discussion of your goals, comfort level, and any areas of concern. Treatment planning is collaborative, and clear communication and consent are prioritized throughout the session.",
+          "Your treatment begins with a discussion of your goals, comfort level, any areas of concern, and doing any relevant assessments. Treatment planning is collaborative, and clear communication and consent are prioritized throughout the session.",
       },
       {
         question: "Do you use a trauma-informed approach?",
         answer:
-          "Yes. Trauma-informed care means prioritizing safety, choice, collaboration, and consent at every stage of treatment. You are always in control of your session and may pause, change pressure, adjust positioning, or stop at any time.",
+          "Yes. Trauma-informed massage therapy recognizes that many people carry stress, medical trauma, emotional wounds, or experiences of harm in their bodies and nervous systems. This approach prioritizes safety, choice, collaboration, and consent at every stage of treatment. It does not assume trauma, but it operates in a way that makes care safer for everyone.",
       },
       {
         question: "What is the cancellation policy?",
@@ -184,14 +169,19 @@ const userMessages = {
           "Yes. Any outstanding fees must be paid prior to booking future appointments.",
       },
       {
-        question: "Do you offer direct billing?",
+        question: "Do you do direct billing?",
         answer:
-          "Direct billing information is still being finalized. At this time, specific providers have not yet been listed. The clinic notes that it is not currently taking ICBC or WCB claims.",
+          "Direct billing is available for most extended health insurance companies. Direct billing is not available for ICBC, MSP, or WCB claims.",
       },
       {
         question: "Do you provide receipts for insurance reimbursement?",
         answer:
           "Yes. Receipts can be provided for self-submission. Specific insurers for direct billing and self-submission are still to be added.",
+      },
+      {
+        question: "Do you accept ICBC patients?",
+        answer:
+          "My apologies, I am not currently accepting ICBC patients.",
       },
     ],
   },
@@ -208,6 +198,7 @@ const userMessages = {
     website: "www.SacredSymmetryRMT.com",
     hoursLabel: "Hours",
     hoursWeekday: "Mon–Fri: 11:00 AM – 7:00 PM",
+    hoursSaturday: "Sat: By appointment",
     bookNow: "Book Now",
     mapPlaceholder: "Map placeholder",
     mapLinkText: "Open in Google Maps",
