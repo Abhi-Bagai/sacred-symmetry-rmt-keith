@@ -190,7 +190,7 @@ const userMessages = {
   contact: {
     heading: "Contact",
     name: "Sacred Symmetry Massage Therapy",
-    addressLine1: "934B Thompson Ave",
+    addressLine1: "834B Thompson Ave",
     location: "Chase, BC",
     phone: "(236) 313-1312",
     phoneNote: "Call or text",

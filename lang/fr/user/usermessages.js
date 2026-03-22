@@ -192,7 +192,7 @@ const userMessages = {
   contact: {
     heading: "Contact",
     name: "Sacred Symmetry Massage Therapy",
-    addressLine1: "934B Thompson Ave",
+    addressLine1: "834B Thompson Ave",
     location: "Chase, C.-B.",
     phone: "(236) 313-1312",
     phoneNote: "Appel ou texto",
